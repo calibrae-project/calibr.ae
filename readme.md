@@ -25,13 +25,21 @@ This is a bullet-point based outline of all the elements of Calibrae set forth i
 - Block rewards are calculated instead of using a bi-annual halving sequence, by an exponential decay algorithm that results in a constant expansion of supply of 5% per year. The token denomination is encoded with 128 bit fixed precision integer based numbers and mining for issuance never stops, though in first year 95% is issued, and then 95% of the remainder in year two, and so on indefinitely, for which reason there is no need for transaction fees.
   
 
-## Kriya - Privacy focused GPU resistant PoW coin
+## Kriya - Privacy focused GPU focused PoW coin
 
 - Name is from the Bulgarian word for hidden.
 
 - Using the same parameters as Spawn, except with 5 minute blocks (due to higher processing cost for block validation), but built out from the Monero codebase to use Ring Signatures by default and Confidential Transactions to mask account balances and transaction sizes.
 
 - Has a greater processing load so is better suited to secure storage of assets and especially large transactions.
+
+- Rather than use the same PoW as Spawn, which is a proof of work that requires database-search style processing (CPUs are in fact basically ASICs for databases, specifically Key/Value and Table databases), the PoW will be designed for this privacy coin to target the strengths of GPU processors instead. GPUs are specifically built to deal with very large graph databases. 3D modelling is all about graph database searches. So, where Spawn's PoW works via data cache locality and a binary search tree, which is a type of Key/Value database model, Kriya will use a Proof of Work that depends on a more spread out search algorithm.
+
+  Specifically, the benefit of Graph databases comes from when you have complex *webs* of data, as opposed to linear data structures as CPUs are designed to work with. The algorithm that will be designed for this purpose will also be ASIC resistant because it is an algorithm pattern that is already the specialty of this type of hardware.
+
+  Eliminating the flooding of miner networks with massive bumps in hashpower is a key goal of Calibrae. Proof of Work blockchains are in fact very suitable large volume clearance systems, not for consumer side so much as for bulk, batched business transactions. This is why Calibrae will include two standard form Proof of Work blockchains. The rest of the tokens that link to these via the distributed exchange work by the use of a social network computed trust mechanism, allowing them to propagate data in exactly the pattern that suits the application (most especially as relates to latency and throughput trade-offs).
+
+    Calibrae intends to be like a haven for all kinds of specialities, and to make more efficient use of resources for longer periods of time, which is why it is a key goal to forge methods to eliminate the pernicious influence of single-use, high capital investment to gain short term advantage at the expense of other users.
 
 ### Why PoW?
 
